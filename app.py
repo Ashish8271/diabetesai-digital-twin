@@ -330,12 +330,14 @@ def dna_helix(prob):
     for x, z, c in [(x1,z1,c1),(x2,z2,c2)]:
         fig.add_trace(go.Scatter3d(
             x=x, y=y1, z=z, mode="lines",
-            line=dict(color=c.replace("#","rgba(").rstrip(")") + ",0.15)", width=12),
+            line=dict(color=c, width=8),
+            opacity=0.18,
             showlegend=False, hoverinfo="skip"
         ))
         fig.add_trace(go.Scatter3d(
             x=x, y=y1, z=z, mode="lines",
             line=dict(color=c, width=4),
+            opacity=0.95,
             showlegend=False, hoverinfo="skip"
         ))
 
